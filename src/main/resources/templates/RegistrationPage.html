@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="RegistrationPage.css">
+</head>
+<body>
+<form id="reg" autocomplete="off" th:action="@{/regForm}" th:object="${user}" method="post">
+    <div id="regis">
+        <div id="webName">
+            <span>AI </span>
+            <span id="invw">INTERVIEW</span>
+        </div><br><br>
+        <div>
+            <span> User Name:</span><br>
+            <input type="text" th:field="*{userName}" placeholder="Enter First Your Name" required minlength="2" maxlength="25">
+        </div> <br>
+        <div>
+            <span>Role:</span><br>
+            <input type="text" th:field="*{role}" placeholder="Software Developer">
+        </div><br>
+        <div>
+            <span>Email:</span><br>
+            <input type="email" th:field="*{email}"  placeholder="Email" required>
+        </div><br>
+        <div>
+            <span>Password:</span><br>
+            <input type="password" th:field="*{password}" placeholder="Password" required maxlength="8">
+        </div>
+        <br><br>
+        <div>
+            <span><input class="btn1" type="submit" value="Register"></span>
+        </div>
+        <div th:if="${successMsg}">
+            <h4 style="color: green" th:text="${successMsg}"></h4>
+        </div>
+        <div th:if="${ErrorMsg}">
+            <h4 style="color: red" th:text="${ErrorMsg}"></h4>
+        </div>
+        <div>
+            <p>Login Here:</p>
+            <span><a class="btn2" th:href="@{/loginPage}">Login</a></span>
+        </div>
+    </div>
+</form>
+</body>
+
+</html>

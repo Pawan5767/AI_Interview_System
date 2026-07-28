@@ -1,0 +1,411 @@
+body {
+    background-color: #030303;
+    color: #ffffff;
+}
+
+#dash {
+    display: flex;
+    width: 100%;
+}
+
+#dash1 {
+    display: inline;
+    text-align: center;
+    line-height: 70px;
+    width: 15%;
+    height: 950px;
+}
+
+#dash1 a {
+    font-family: sans-serif;
+    color: #6B7280;
+    font-size: 17px;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+#dash1 a:hover {
+    color: #818CF8;
+    background-color: #6366F133;
+    border-radius: 20px;
+}
+
+#dash2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    width: 85%;
+    height: 100px;
+}
+
+@media(max-width:1110px) {
+    #dash1 {
+        display: none;
+    }
+
+    #bell {
+        display: none;
+    }
+
+    #dash2 {
+        width: 100%;
+    }
+}
+
+@media(max-width:600px) {
+    #dash2 {
+        position: absolute;
+        left: 12%;
+    }
+}
+
+#dash2 h1 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    margin: 0px;
+}
+
+#dash2 p {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    color: rgb(107 114 128);
+    margin: 0px;
+}
+
+#logo {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    width: 25%;
+}
+
+#avtar {
+    display: flex;
+}
+
+@media(max-width:624px) {
+    #avt {
+        display: none;
+    }
+}
+
+#avt {
+    margin: 5px;
+}
+
+#avtar h1 {
+    font-size: 16px;
+}
+
+#bell {
+    margin-top: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+#webName {
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+#invw {
+    color: #6366F1;
+}
+
+#opt,#opt1,#opt2,#opt3,#opt4{
+    display: block;
+}
+
+#cards {
+    display: flex;
+    justify-content: space-between;
+    width: 81%;
+    position: absolute;
+    left: 250px;
+    bottom: 300px;
+}
+
+@media(max-width:1110px) {
+    #cards {
+        width: 100%;
+        left: 0px;
+    }
+}
+
+@media(max-width:600px) {
+    #cards {
+        display: block;
+        width: 100%;
+        left: 15%;
+    }
+}
+
+.card {
+    width: 400px;
+    height: 240px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+
+@media(max-width:992px) {
+    .card {
+        height: 300px;
+    }
+
+    #cards {
+        top: 100px;
+    }
+}
+
+@media(max-width:768px) {
+    .card {
+        height: 250px;
+    }
+
+    #cardbody h5 {
+        font-size: 15px;
+    }
+
+    #cardbody p {
+        font-size: 12px;
+    }
+
+    #cardbody a {
+        font-size: 12px;
+    }
+
+}
+@media(max-width:768px) {
+    .card {
+        height: 250px;
+    }
+
+    #cardbody1 h5 {
+        font-size: 15px;
+    }
+
+    #cardbody1 p {
+        font-size: 12px;
+    }
+
+    #cardbody1 a {
+        font-size: 12px;
+    }
+
+}
+@media(max-width:768px) {
+    .card {
+        height: 250px;
+    }
+
+    #cardbody2 h5 {
+        font-size: 15px;
+    }
+
+    #cardbody2 p {
+        font-size: 12px;
+    }
+
+    #cardbody2 a {
+        font-size: 12px;
+    }
+
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    border-color: rgba(99, 102, 241, 0.5);
+}
+
+.card img {
+    width: 40px;
+    margin-left: 15px;
+    padding: 10px;
+    background-color: #6B7280;
+    border-radius: 50%;
+}
+
+.card p {
+    color: white;
+    font-size: 15px;
+}
+
+.card h5 {
+    color: white;
+    font-size: 20px;
+}
+
+#startInt {
+    width: 81%;
+    position: absolute;
+    left: 250px;
+    bottom: -100px;
+}
+
+@media(max-width:1110px) {
+    #startInt {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        left: 0px;
+    }
+}
+
+@media(max-width:992px) {
+    #startInt {
+        width: 100%;
+        position: relative;
+        margin-top: 250px;
+        bottom: 0px;
+        left: 0px;
+
+
+    }
+}
+
+@media(max-width:768px) {
+    #startInt {
+        width: 100%;
+        position: relative;
+        margin-top: 250px;
+        bottom: 0px;
+        left: 0px;
+    }
+}
+
+@media(max-width:600px) {
+    #startInt {
+        width: 100%;
+        position: relative;
+        margin-top: 850px;
+        margin-left: 30px;
+        bottom: 0px;
+        left: 0px;
+    }
+}
+
+@media(max-width:357px) {
+    #startInt {
+        width: 100%;
+        position: relative;
+        margin-top: 850px;
+        margin-left: 50px;
+        bottom: 0px;
+        left: 0px;
+    }
+}
+
+#sec2 {
+    margin-top: 8%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgb(99 102 241 / 0.2);
+    padding: 48px;
+    border-radius: 20px;
+}
+
+
+#sec2:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    border-color: rgba(99, 102, 241, 0.5);
+}
+
+#sec2 h2{
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+#resumeFile{
+    border: 1px solid rgb(99 102 241 / 0.2);
+    border-radius: 10px;
+    width: 300px;
+    padding: 30px;
+
+}
+
+#sec2 #startBtn{
+    font-size: 18px;
+    margin-top: 25px;
+    text-decoration: none;
+    padding: 16px 40px;
+    border-radius: 15px;
+    background-color: #4F46E5;
+    color: white;
+    letter-spacing: 0.03rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#para2 {
+    font-size: 14px;
+    margin: 15px;
+    color: #6B7280;
+}
+
+@media(max-width:453px) {
+    #para2 {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:326px) {
+    #para2 {
+        font-size: 10px;
+    }
+
+    #sec2 #startBtn{
+        font-size: 10px;
+    }
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    top: 800px;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.03);
+    margin-top: 10%;
+    width: 100%;
+    height: 70px;
+}
+@media(max-width:600px) {
+    footer {
+        width: 100%;
+        position: relative;
+        top: 0px;
+        margin-left: 50px;
+    }
+}
+
+
+#ftr {
+    letter-spacing: 0.06rem;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#nme {
+    color: #6366F1;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#footera a {
+    text-decoration: none;
+    color: #6B7280;
+    padding: 10px;
+    font-size: 14px;
+}
+
+#copyright {
+    font-size: 14px;
+    color: #6B7280;
+}

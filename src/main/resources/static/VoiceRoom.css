@@ -1,0 +1,333 @@
+body {
+    background-color: #030303;
+    color: #ffffff;
+}
+
+#header {
+    display: flex;
+    font-family: sans-serif;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.02);
+    height: 50px;
+    padding: 26px;
+}
+
+#audio {
+    color: #818CF8;
+}
+
+#span1 {
+    margin-left: 30px;
+    color: #9CA3AF;
+}
+
+#room {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 30px;
+    height: 500px;
+
+}
+
+#interviewer {
+    display: flex;
+    justify-content: center;
+
+}
+#interviewer p {
+    background-color: #676363;
+    font-size: 150px;
+    border-radius: 50%;
+    padding: 40px;
+}
+
+#currQuest {
+    text-align: center;
+}
+
+#para1 {
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #4F46E5;
+    font-weight: 700;
+}
+
+#para2 {
+    font-size: 12px;
+    letter-spacing: 0.25rem;
+    color: #6366F1;
+    font-weight: 500;
+}
+
+#roombanner {
+    margin-top: 10px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.02);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    border-radius: 30px;
+}
+
+#roombanner img {
+    width: 50px;
+}
+#tools1{
+    display: flex;
+    justify-content: space-around;
+
+}
+#tools,#tools5,#tools6 {
+    display: flex;
+    padding: 28px;
+}
+
+#tool1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+#tools img {
+    width: 25px;
+    height: 25px;
+    margin-left: 2px;
+}
+#tools5 img {
+    width: 25px;
+    height: 25px;
+    margin-left: 2px;
+}
+#tools6 img {
+    width: 25px;
+    height: 25px;
+    margin-left: 2px;
+}
+
+#tools button {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: sans-serif;
+    color: white;
+    width: 240px;
+    padding: 15px;
+    border-radius: 20px;
+    border-color: rgb(255 255 255 / 0.1);
+}
+#tools5 button {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: sans-serif;
+    color: white;
+    width: 240px;
+    padding: 15px;
+    border-radius: 20px;
+    border-color: rgb(255 255 255 / 0.1);
+}
+#tools6 button {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: sans-serif;
+    color: white;
+    width: 240px;
+    padding: 15px;
+    border-radius: 20px;
+    border-color: rgb(255 255 255 / 0.1);
+}
+
+#btn3 {
+    background-color: rgb(255 255 255 / 0.2);
+    border-color: rgb(255 255 255 / 0.1);
+    border-radius: 50px;
+    margin-top: 25px;
+    padding: 5px;
+}
+
+#btn3 img {
+    width: 45px;
+}
+
+#btn p {
+    font-size: 12px;
+    color: #6B7280;
+    text-align: center;
+}
+
+#btn:hover {
+    #btn3 {
+        background-color: rgb(79 70 229);
+    }
+
+    p {
+        color: white;
+        font-weight: 700;
+    }
+}
+
+#btn1 {
+    background-color: #DC2626;
+}
+
+#btn1:hover {
+    background-color: rgb(185, 28, 28);
+}
+
+#btn2,#btn4 {
+    background-color: rgb(255 255 255 / 0.05);
+
+}
+
+#btn2:hover {
+    background-color: rgb(255 255 255 / 0.1);
+}
+#btn4:hover {
+    background-color: rgb(255 255 255 / 0.1);
+}
+
+@media(max-width:992px) {
+    #tools button {
+        padding: 6px;
+        width: 150px;
+        font-size: 14px;
+    }
+
+    #tools img {
+        width: 20px;
+        height: 20px;
+    }
+    #tools5 button {
+        padding: 6px;
+        width: 150px;
+        font-size: 14px;
+    }
+
+    #tools5 img {
+        width: 20px;
+        height: 20px;
+    }
+    #tools6 button {
+        padding: 6px;
+        width: 150px;
+        font-size: 14px;
+    }
+
+    #tools6 img {
+        width: 20px;
+        height: 20px;
+    }
+
+    #btn3 img {
+        width: 30px;
+    }
+
+    #btn p {
+        font-size: 9px;
+    }
+}
+
+@media(max-width:768px) {
+    #tools button {
+        padding: 6px;
+        width: 100px;
+        font-size: 12px;
+    }
+
+    #tools img {
+        width: 20px;
+        height: 20px;
+    }
+    #tools5 button {
+        padding: 6px;
+        width: 100px;
+        font-size: 12px;
+    }
+
+    #tools5 img {
+        width: 20px;
+        height: 20px;
+    }
+    #tools6 button {
+        padding: 6px;
+        width: 100px;
+        font-size: 12px;
+    }
+
+    #tools6 img {
+        width: 20px;
+        height: 20px;
+    }
+
+    #btn3 img {
+        width: 30px;
+    }
+
+    #btn p {
+        font-size: 9px;
+    }
+}
+
+@media(max-width:570px) {
+    #audio {
+        display: none;
+    }
+}
+
+@media(max-width:505px) {
+    #roombanner {
+        display: block;
+    }
+
+    #btn p {
+        margin-left: 15px;
+        margin-top: 5px;
+        text-align: left;
+    }
+    #tool1{
+        position: relative;
+        right: 25px;
+    }
+}
+@media(max-width:397px) {
+    #header{
+        font-size: 10px;
+    }
+    #span1,#spa{
+        position: relative;
+        right: 35px;
+    }
+}
+@media(max-width:300px) {
+    #tools button {
+        padding: 4px;
+        width: 85px;
+        font-size: 10px;
+    }
+
+    #tools img {
+        width: 15px;
+        height: 15px;
+    }
+    #tools5 button {
+        padding: 4px;
+        width: 85px;
+        font-size: 10px;
+    }
+
+    #tools5 img {
+        width: 15px;
+        height: 15px;
+    }
+    #tools6 button {
+        padding: 4px;
+        width: 85px;
+        font-size: 10px;
+    }
+
+    #tools6 img {
+        width: 15px;
+        height: 15px;
+    }
+}

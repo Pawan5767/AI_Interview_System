@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="DashboardPage.css">
+</head>
+
+<body>
+<div>
+    <div id="dash">
+        <div id="dash1">
+            <div id="webName">
+                <span>AI </span>
+                <span id="invw">INTERVIEW</span>
+            </div>
+            <div>
+                <a id="opt" th:href="@{/dash}">Dashboard</a>
+                <a id="opt4" th:href="@{/Logout}">Logout</a>
+            </div>
+        </div>
+        <div id="dash2">
+            <div>
+                <h1>Welcome Back,<span th:text="${UserName}"></span></h1>
+                <p>Here's your performance overview for this month.</p>
+            </div>
+            <div id="logo">
+                <div id="avtar">
+                    <div id="avt">
+                        <h1 th:text="${UserName}"></h1>
+                        <p th:text="${role}"></p>
+                    </div>
+                    <img src="./Img/user.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="cards">
+        <div class="card">
+            <img src="./Img/Upload File.png" class="card-img-top" alt="...">
+            <div class="card-body" id="cardbody">
+                <h5 class="card-title">New Practice</h5>
+                <p class="card-text">Start a fresh AI interview session based on your profile.</p>
+                <a href="#" class="btn btn-primary">Start Now</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./Img/Upload File.png" class="card-img-top" alt="...">
+            <div class="card-body" id="cardbody1">
+                <h5 class="card-title">Upload Resume</h5>
+                <p class="card-text">Update your CV to get targeted industry questions.</p>
+                <a href="#" class="btn btn-primary">Choose File</a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./Img/Upload File.png" class="card-img-top" alt="...">
+            <div class="card-body" id="cardbody2">
+                <h5 class="card-title">Practice History</h5>
+                <p class="card-text">Review your past performance and video playbacks.</p>
+                <a href="#" class="btn btn-primary">View All</a>
+            </div>
+        </div>
+    </div>
+    <div id="startInt">
+        <div class="container" id="sec2">
+            <h2>Upload Resume</h2>
+            <input type="file" id="resumeFile" accept=".pdf,.doc,.docx,.txt"><br><br>
+            <p id="fileMsg"></p><br><br>
+            <a href="#" id="startBtn">Start The Interview</a>
+            <p id="para2">Practice Smarter, Get Hired Faster.</p>
+        </div>
+    </div>
+    <footer>
+        <div id="ftr">
+            <span>AI</span>
+            <span id="nme">INTERVIEW</span>
+        </div>
+        <div id="footera">
+            <a href="">Privacy</a>
+            <a href="">Terms</a>
+            <a href="">Contact</a>
+        </div>
+        <p id="copyright">Developed By: Pawan Kumar</p>
+    </footer>
+</div>
+<script>
+    document.getElementById("startBtn").onclick = function () {
+        let file = document.getElementById("resumeFile").files[0];
+
+if (!file) {
+    alert("Select TXT file");
+    return;
+}
+
+let reader = new FileReader();
+
+reader.onload = function (e) {
+
+    let text = e.target.result;
+
+    localStorage.setItem(
+        "resumeText",
+        text
+    );
+
+    window.location.href = "/voiceRoom";
+};
+reader.readAsText(file);
+};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

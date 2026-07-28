@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summery Report</title>
+    <style>
+        body {
+            background-color: #030303;
+            color: #ffffff;
+        }
+
+        .container-fluid {
+            margin-top: 100px;
+            margin-left: 30px;
+            display: flex;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        #table1 {
+            border: 1px solid rgb(99 102 241 / 0.4);
+            border-radius: 20px;
+            width: 700px;
+            height: 50vh;
+            font-family: sans-serif;
+            font-weight: 500;
+            padding: 60px;
+
+        }
+
+        #table2 {
+            width: 700px;
+            height: 60vh;
+            border: 1px solid rgb(99 102 241 / 0.4);
+            border-radius: 20px;
+            font-family: sans-serif;
+            font-weight: 500;
+        }
+
+        #table2 th {
+            font-size: 20px;
+        }
+        #table2 td {
+            font-size: 14px;
+            text-align:center;
+        }
+
+        #table1:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            border-color: rgba(67, 70, 241, 0.5);
+            background-color: rgb(99 102 241 / 0.1);
+        }
+        #table2:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+            border-color: rgba(67, 70, 241, 0.5);
+            background-color: rgb(99 102 241 / 0.1);
+        }
+
+        thead {
+            color: blue;
+            font-size: 24px;
+        }
+
+        tbody {
+            line-height: 60px;
+            font-size: 20px;
+        }
+
+        #backtodash {
+            width: 100%;
+            text-align: right;
+            margin-top: 20px;
+        }
+
+        #backtodash a {
+            text-decoration: none;
+            color: white;
+            font-family: sans-serif;
+        }
+
+        @media(max-width:1000px) {
+            .container-fluid {
+                display: block;
+                width: 100%;
+                margin: 0px;
+            }
+
+            .container {
+                height: 75vh;
+            }
+        }
+
+        @media(max-width:500px) {
+
+            table th,
+            td {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="container">
+        <table id="table1">
+            <thead>
+            <th> Interview Performance Report</th>
+            </thead>
+
+            <tbody>
+
+            <tr>
+                <td>Total Questions:</td>
+                <td id="totalQ"></td>
+            </tr>
+
+            <tr>
+                <td>Answered:</td>
+                <td id="answered"></td>
+            </tr>
+
+            <tr>
+                <td>Score:</td>
+                <td id="score"></td>
+            </tr>
+
+            <tr>
+                <td>Status:</td>
+                <td id="status"></td>
+            </tr>
+
+            <tr>
+                <td>Time Taken:</td>
+                <td id="timeTaken"></td>
+            </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <table id="table2">
+            <thead>
+            <th>Suggestion</th>
+            </thead>
+            <tbody>
+            <tr>
+                <td id="suggestions"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div id="backtodash">
+    <a th:href="@{/dash}">Back to Dashboard..!!</a>
+</div>
+
+<script>
+
+    document.getElementById("totalQ").innerText =
+        localStorage.getItem("totalQuestions");
+
+    document.getElementById("answered").innerText =
+        localStorage.getItem("answered");
+
+    document.getElementById("score").innerText =
+        localStorage.getItem("finalScore");
+
+    document.getElementById("status").innerText =
+        localStorage.getItem("status");
+
+    document.getElementById("timeTaken").innerText =
+        localStorage.getItem("timeTaken");
+    let savedSuggestions =
+        localStorage.getItem("suggestions");
+
+    if(savedSuggestions){
+        let list = JSON.parse(savedSuggestions);
+        document.getElementById("suggestions").innerHTML = list.map(s => "• " + s).join("<br><br>");
+
+    }else{
+        document.getElementById("suggestions").innerText = "No suggestions available";
+    }
+
+</script>
+</body>
+
+</html>
