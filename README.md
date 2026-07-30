@@ -7,7 +7,6 @@
 - ✅ Resume Upload
 - ✅ AI Generates Questions Based on Resume
 - ✅ 5 Technical + 5 HR Questions
-- ✅ First Question: Tell me about yourself
 - ✅ Voice-Based Answering (Speech Recognition)
 - ✅ 30 Seconds Per Question
 - ✅ Automatic Next Question
@@ -21,28 +20,58 @@
 - **Backend:** Java, Spring Boot
 - **Frontend:** HTML, CSS, JavaScript, Thymeleaf
 - **Database:** MySQL
-- **AI Model:** Ollama + Mistral
+- **AI:** OpenRouter API
 - **Build Tool:** Maven
+- **Deployment:** Railway
  <hr>
  
 ## ⚙️ How to Run the Project
-1. Clone Repository
-   ```bash
-   https://github.com/Pawan5767/AI-Interview-Web-Application.git
-   ```
-3. Open Project in IntelliJ / STS
-4. Configure MySQL Database
-    ```bash
-   //Upadate:
-   application.properties
-   ```
-6. Run Ollama
-    ```bash
-   //Install Ollama and run:
-   ollama run mistral
-   ```
-7. Run the project on server
+
+### Clone the repository
+```bash
+git clone https://github.com/username/AIInterviewSystem.git
+```
+
+### Open the project
+```
+Open the project in IntelliJ IDEA.
+```
+
+### Configure MySQL
+Create a database
+```SQL
+CREATE DATABASE ai_interview;
+```
+Update your application.properties
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/ai_interview
+spring.datasource.username=YOUR_USERNAME
+spring.datasource.password=YOUR_PASSWORD
+```
+
+### Configure OpenRouter API
+```
+openrouter.api.key=YOUR_API_KEY
+```
+
+### Run the project
+```bash
+mvn spring-boot:run
+```
+or run the Spring Boot application directly from IntelliJ.
+
+### Open in Browser
+```
+http://localhost:8080/aiinterview
+```
+
+### 🌐Live Demo
+```
+https://aiinterviewsystem-production.up.railway.app/aiinterview
+```
 <hr>
+
+### 📸 Screenshots
 
 ## 🚀AI Features
 - Resume-based question generation
