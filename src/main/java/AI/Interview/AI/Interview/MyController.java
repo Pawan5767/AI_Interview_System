@@ -89,15 +89,20 @@ public class MyController {
     public String voiceRoom(HttpSession session, Model model) {
         User user = (User) session.getAttribute("loginUser");
         model.addAttribute("role", user.getRole());
-        String str = user.getUserName();
-        String user1="";
-        user1=String.valueOf(str.charAt(0));
-        for (int i = 0; i < str.length(); i++){
-            if (str.charAt(i)==' '){
-                user1=user1+String.valueOf(str.charAt(i+1));
-            }
+       String str = user.getUserName();
+String user1 = "";
+
+if (str != null && !str.isEmpty()) {
+    user1 += str.charAt(0);
+
+    for (int i = 0; i < str.length() - 1; i++) {
+        if (str.charAt(i) == ' ') {
+            user1 += str.charAt(i + 1);
         }
-              model.addAttribute("userNme", user1);
+    }
+}
+
+model.addAttribute("userNme", user1);
         return "VoiceRoom";
     }
 
