@@ -29,7 +29,7 @@
 
 ### Clone the repository
 ```bash
-git clone https://github.com/username/AIInterviewSystem.git
+git clone https://github.com/Pawan5767/AI_Interview_System.git
 ```
 
 ### Open the project
